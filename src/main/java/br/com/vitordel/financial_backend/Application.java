@@ -2,12 +2,14 @@ package br.com.vitordel.financial_backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-public class FinancialBackendApplication {
+@PropertySource("file:${user.dir}/.env")
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FinancialBackendApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
